@@ -1,23 +1,51 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Category from "../views/Category.vue";
+import GoodsList from '../views/GoodsList.vue'
+import Cart from "../views/Cart.vue";
+import Center from "../views/Center.vue";
+import Layout from '../Layout.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    component: Layout,
+    // 整个app的容器
+    children: [
+      {
+        path: '',
+        redirect: "/category", //重定向
+      },
+      {
+        path: "category",
+        component: Category,
+        children: [
+          {
+            path: 'goods-list',
+            component: GoodsList
+          }
+        ]
+      },
+      {
+        path: "cart",
+        component: Cart,
+      },
+      {
+        path: "center",
+        component: Center,
+      },
+    ],
   },
+  // 登录
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: "/login",
+  },
+  // 注册
+  {
+    path: "regester",
+  },
 ]
 
 const router = new VueRouter({
