@@ -1,11 +1,13 @@
 <template>
-  <div id="wrapper" ref="wrapper">
-    <slot></slot>
+  <div class="wrapper" ref="wrapper">
+    <div class="wrappers">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <script>
-import Iscroll from "@/assets/js/iscroll-probe";
+import Iscroll from "@/assets/js/iscroll-master/build/iscroll-probe";
 export default {
   name: "ScrollView",
   mounted() {
@@ -13,23 +15,30 @@ export default {
       mouseWheel: true,
       interactiveScrollbars: true,
       bounceEasing: "elastic",
+      probeType: 2,
     });
-    let observer = new MutationObserver((mutationList, observer) => {
-      this.iscroll.refresh();
-    });
-    const config = {
-      childList: true, // 观察目标子节点的变化，添加或者删除
-      subtree: true, // 默认为 false，设置为 true 可以观察后代节点
-      attributeFilter: ["height", "offsetHeight"], // 观察特定属性
-    };
-    observer.observe(this.$refs.wrapper, config);
+  },
+  methods: {
+    scrolling() {
+      this.iscroll.scrollTo(0, 0, 0);
+      setTimeout(() => {
+        this.iscroll.refresh();
+      }, 1000);
+    },
+  },
+  updated() {
+    this.$nextTick(this.scrolling());
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#wrapper {
+.wrapper {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+
+  .wrappers {
+    min-height: calc(100% + 1px);
+  }
 }
 </style>

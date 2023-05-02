@@ -23,7 +23,7 @@ const routes = [
         component: Category,
         children: [
           {
-            path: 'goods-list/:id',
+            path: 'goods-list/:index/:id',
             component: GoodsList
           }
         ]

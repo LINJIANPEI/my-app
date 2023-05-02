@@ -65,13 +65,14 @@ export default {
 
 <style lang="scss" scoped>
 .tab-bar {
+  box-shadow: 0 0 5px 3px #eee;
+  background: #fff;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 49px;
   display: flex;
-  border-top: 1px solid #eee;
   .tab-item {
     flex: 1;
     display: flex;

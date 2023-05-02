@@ -18,6 +18,8 @@ body,
 #app {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  touch-action: none;
   .page {
     position: absolute;
     top: 0;
