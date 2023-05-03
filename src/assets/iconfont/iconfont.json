@@ -1,0 +1,65 @@
+{
+  "id": "4045102",
+  "name": "网易严选",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "629362",
+      "name": "提示",
+      "font_class": "tishi",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "2674476",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "4598257",
+      "name": "大于号",
+      "font_class": "dayuhao",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "687392",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e6ff",
+      "unicode_decimal": 59135
+    },
+    {
+      "icon_id": "76989",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "624530",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "1221178",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "3522449",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}

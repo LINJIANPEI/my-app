@@ -35,6 +35,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   position: relative;
+  overflow: hidden;
   width: 100%;
 
   .wrappers {

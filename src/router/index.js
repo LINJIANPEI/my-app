@@ -2,9 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Category from "../views/Category.vue";
 import GoodsList from '../views/GoodsList.vue'
+import Goods from '../views/Goods.vue'
 import Cart from "../views/Cart.vue";
 import Center from "../views/Center.vue";
 import Layout from '../Layout.vue'
+
 
 Vue.use(VueRouter)
 
@@ -25,7 +27,11 @@ const routes = [
           {
             path: 'goods-list/:index/:id',
             component: GoodsList
-          }
+          },
+          {
+            path: 'Goods/:id/',
+            component: Goods
+          },
         ]
       },
       {

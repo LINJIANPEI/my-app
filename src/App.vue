@@ -27,7 +27,6 @@ body,
     /* 隔开tabbar的位置 */
     bottom: 49px;
     width: 100%;
-    background: #fff;
   }
   .subpage {
     bottom: 0;
